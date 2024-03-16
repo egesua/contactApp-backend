@@ -18,7 +18,7 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_DEFAULT;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(NON_DEFAULT)
-@Table(name = "contacts")
+@Table(name = "contacts", schema = "public")
 public class Contact {
     @Id
     @UuidGenerator
