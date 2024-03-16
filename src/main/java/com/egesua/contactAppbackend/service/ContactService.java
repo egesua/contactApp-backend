@@ -55,7 +55,7 @@ public class ContactService {
         return photoUrl;
     }
 
-    //biFunction usage, first two parameters goes in, returns as a third param.
+    //biFunction usage, first two parameters goes in, returns the third param.
     private final Function<String, String> fileExtension = filename -> Optional.of(filename).filter(name -> name.contains("."))
             .map(name -> "." + name.substring(filename.lastIndexOf(".") + 1)).orElse(".png");
 
