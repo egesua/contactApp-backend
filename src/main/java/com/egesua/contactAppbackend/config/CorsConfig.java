@@ -8,6 +8,7 @@ import org.springframework.web.filter.CorsFilter;
 
 import java.util.List;
 
+import static com.egesua.contactAppbackend.constant.Constant.X_REQUESTED_WITH;
 import static org.springframework.http.HttpHeaders.ACCEPT;
 import static org.springframework.http.HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS;
 import static org.springframework.http.HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN;
@@ -25,8 +26,6 @@ import static org.springframework.http.HttpMethod.PUT;
 
 @Configuration
 public class CorsConfig {
-
-    private static final String X_REQUESTED_WITH = "X-Requested-With";
 
     @Bean
     public CorsFilter corsFilter() {
